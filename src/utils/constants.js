@@ -14,7 +14,7 @@ export const STATS = [
   { id: 1, value: 12, suffix: '+', label: 'Years Experience' },
   { id: 2, value: 5000, suffix: '+', label: 'Active Members' },
   { id: 3, value: 35, suffix: '+', label: 'Certified Trainers' },
-  { id: 4, value: 24, suffix: '/', label: '7 Open Hours' },
+  { id: 4, value: 24, suffix: '/7', label: 'Open Access' },
 ];
 
 export const GYM_INFO = {
