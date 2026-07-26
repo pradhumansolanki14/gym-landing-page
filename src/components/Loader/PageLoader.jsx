@@ -23,7 +23,7 @@ const PageLoader = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="text-xl font-black uppercase tracking-widest text-white"
+        className="text-xl font-black uppercase tracking-widest text-white font-heading"
       >
         APEX <span className="text-lime-400">ATHLETICS</span>
       </motion.h3>

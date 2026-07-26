@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBars, FaTimes, FaDumbbell, FaChevronRight } from 'react-icons/fa';
+import { FaBars, FaTimes, FaChevronRight } from 'react-icons/fa';
 import { NAV_LINKS } from '../../utils/constants';
 import PrimaryButton from '../Button/PrimaryButton';
 
@@ -46,11 +46,13 @@ const Navbar = () => {
             : 'bg-zinc-950/40 backdrop-blur-lg border border-white/10 shadow-lg'
         }`}
       >
-        {/* Brand Logo */}
+        {/* Brand Logo with Custom SVG */}
         <a href="#home" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-full bg-gradient-to-tr from-lime-400 to-emerald-400 text-zinc-950 flex items-center justify-center font-black text-lg shadow-[0_0_15px_rgba(163,230,53,0.4)] transition-transform group-hover:scale-110 group-hover:rotate-12">
-            <FaDumbbell />
-          </div>
+          <img
+            src="/favicon.svg"
+            alt="APEX Athletics Logo"
+            className="w-9 h-9 sm:w-10 sm:h-10 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12 drop-shadow-[0_0_12px_rgba(163,230,53,0.4)]"
+          />
           <span className="text-lg sm:text-xl font-black uppercase tracking-wider text-white font-heading">
             APEX <span className="text-lime-400">ATHLETICS</span>
           </span>

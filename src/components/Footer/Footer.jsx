@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaDumbbell, FaInstagram, FaTwitter, FaYoutube, FaFacebookF, FaPaperPlane } from 'react-icons/fa';
+import { FaInstagram, FaTwitter, FaYoutube, FaFacebookF, FaPaperPlane } from 'react-icons/fa';
 import { NAV_LINKS, GYM_INFO } from '../../utils/constants';
 
 const Footer = () => {
@@ -25,9 +25,7 @@ const Footer = () => {
         <div className="sm:hidden flex flex-col items-center text-center gap-6 pb-8 border-b border-white/10">
           {/* Logo */}
           <a href="#home" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-lime-400 text-zinc-950 flex items-center justify-center font-black text-base shadow-md">
-              <FaDumbbell />
-            </div>
+            <img src="/favicon.svg" alt="APEX Logo" className="w-8 h-8 rounded-lg shadow-md" />
             <span className="text-lg font-black uppercase tracking-wider text-white font-heading">
               APEX <span className="text-lime-400">ATHLETICS</span>
             </span>
@@ -88,9 +86,7 @@ const Footer = () => {
           {/* Brand Info */}
           <div className="lg:col-span-4 space-y-4">
             <a href="#home" className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-xl bg-lime-400 text-zinc-950 flex items-center justify-center font-black text-xl shadow-lg">
-                <FaDumbbell />
-              </div>
+              <img src="/favicon.svg" alt="APEX Logo" className="w-10 h-10 rounded-xl shadow-lg" />
               <span className="text-2xl font-black uppercase tracking-wider text-white">
                 APEX <span className="text-lime-400">ATHLETICS</span>
               </span>
