@@ -100,7 +100,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile Glass Navigation Drawer */}
+      {/* Mobile Glass Navigation Drawer (Scrollable) */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
@@ -108,15 +108,15 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
             transition={{ duration: 0.3 }}
-            className="xl:hidden mt-3 max-w-7xl mx-auto rounded-3xl bg-zinc-950/95 backdrop-blur-2xl border border-white/15 p-6 shadow-2xl overflow-hidden"
+            className="xl:hidden mt-3 max-w-7xl mx-auto rounded-3xl bg-zinc-950/95 backdrop-blur-2xl border border-white/15 p-4 sm:p-6 shadow-2xl max-h-[80vh] overflow-y-auto"
           >
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-2 sm:gap-3">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center justify-between p-3 rounded-xl bg-white/5 hover:bg-lime-400/10 border border-white/5 hover:border-lime-400/30 text-sm uppercase font-bold text-zinc-200 hover:text-lime-400 transition-all"
+                  className="flex items-center justify-between p-2.5 sm:p-3 rounded-xl bg-white/5 hover:bg-lime-400/10 border border-white/5 hover:border-lime-400/30 text-xs sm:text-sm uppercase font-bold text-zinc-200 hover:text-lime-400 transition-all"
                 >
                   <span>{link.name}</span>
                   <FaChevronRight className="text-xs text-lime-400" />

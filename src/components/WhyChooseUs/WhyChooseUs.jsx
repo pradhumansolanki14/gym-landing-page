@@ -7,28 +7,28 @@ const features = [
   {
     icon: FaDumbbell,
     title: 'Olympic Biomechanics',
-    description: 'Custom state-of-the-art Eleiko platforms, Hammer Strength isolateral machinery, and calibrated iron plates.'
+    description: 'Custom state-of-the-art Eleiko platforms, Hammer Strength machinery, and iron plates.'
   },
   {
     icon: FaUsers,
     title: 'Master Head Coaches',
-    description: 'Certified exercise physiologists with 10+ years coaching athletes, bodybuilders, and fitness beginners.'
+    description: 'Certified exercise physiologists with 10+ years coaching athletes and beginners.'
   },
   {
     icon: FaHeartbeat,
     title: 'Cryo & Recovery Spa',
-    description: 'Infrared saunas, cold plunge tubs, hyperbaric oxygen therapy, and contrast baths for ultra-fast muscular recovery.'
+    description: 'Infrared saunas, cold plunge tubs, hyperbaric oxygen, and contrast baths.'
   },
   {
     icon: FaClock,
     title: '24/7 Keycard Access',
-    description: 'Unrestricted 365-day round-the-clock access so your workout schedule fits your lifestyle without compromise.'
+    description: 'Unrestricted 365-day round-the-clock access to fit your schedule.'
   }
 ];
 
 const WhyChooseUs = () => {
   return (
-    <section id="why-us" className="relative py-20 sm:py-28 bg-zinc-950 overflow-hidden">
+    <section id="why-us" className="relative py-16 sm:py-28 bg-zinc-950 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
           badge="THE APEX ADVANTAGE"
@@ -37,9 +37,9 @@ const WhyChooseUs = () => {
           subtitle="We combine world-class gym machinery, athletic science, and a high-energy community to guarantee your physical evolution."
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Feature Cards Column */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+          {/* Feature Cards Column: 2x2 Grid on Mobile */}
+          <div className="lg:col-span-7 grid grid-cols-2 gap-3.5 sm:gap-6">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
@@ -49,17 +49,19 @@ const WhyChooseUs = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="glass-card p-6 rounded-2xl border border-white/10 hover:border-lime-400/40 transition-all duration-300 group"
+                  className="glass-card p-4 sm:p-6 rounded-2xl border border-white/10 hover:border-lime-400/40 transition-all duration-300 group flex flex-col justify-between"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-lime-400/10 text-lime-400 flex items-center justify-center text-2xl mb-5 group-hover:bg-lime-400 group-hover:text-zinc-950 transition-all duration-300">
-                    <Icon />
+                  <div>
+                    <div className="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-lime-400/10 text-lime-400 flex items-center justify-center text-lg sm:text-2xl mb-3 sm:mb-5 group-hover:bg-lime-400 group-hover:text-zinc-950 transition-all duration-300">
+                      <Icon />
+                    </div>
+                    <h3 className="text-xs sm:text-xl font-bold uppercase text-white mb-1.5 sm:mb-2 font-heading leading-tight group-hover:text-lime-400 transition-colors">
+                      {feature.title}
+                    </h3>
+                    <p className="text-zinc-400 text-[11px] sm:text-sm leading-relaxed font-normal">
+                      {feature.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold uppercase text-white mb-2 font-heading">
-                    {feature.title}
-                  </h3>
-                  <p className="text-zinc-400 text-sm leading-relaxed font-normal">
-                    {feature.description}
-                  </p>
                 </motion.div>
               );
             })}
@@ -76,12 +78,12 @@ const WhyChooseUs = () => {
             <img
               src={images.whyChooseUs}
               alt="Gym Floor Action"
-              className="w-full h-[480px] object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              className="w-full h-[350px] sm:h-[480px] object-cover object-center transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 glass-panel p-5 rounded-2xl border border-white/15">
+            <div className="absolute bottom-6 left-6 right-6 glass-panel p-4 sm:p-5 rounded-2xl border border-white/15">
               <p className="text-xs uppercase font-bold text-lime-400 tracking-wider">Unmatched Standard</p>
-              <p className="text-lg font-black text-white uppercase mt-1 font-heading">Built for High Performers</p>
+              <p className="text-base sm:text-lg font-black text-white uppercase mt-1 font-heading">Built for High Performers</p>
             </div>
           </motion.div>
         </div>
